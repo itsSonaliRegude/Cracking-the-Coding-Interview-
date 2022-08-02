@@ -1,0 +1,32 @@
+package ArraysAndString;
+//implement an algorithm to determine if a string has all unique characters.What if you can not use additional data structure
+
+public class isUnique { //class 
+	boolean Unique (String str) { //function
+		
+		for(int i=0; i<str.length(); i++) {
+			for (int j=i+1;j<str.length();j++) {
+             if (str.charAt(i)== str.charAt(j)) {
+            	 return true;
+             }
+			}
+		}
+		return false;
+		
+	}
+
+public static void main(String[] args) {
+		String str ="pooja";
+        isUnique obj = new isUnique();//object of a class
+        if(obj.Unique(str)) {
+        System.out.println("the given string "+str+" has duplicate characters");
+        }
+        else {
+        	System.out.println("the given string "+str+" has unique characters");
+        }
+        
+        
+	}
+	
+
+}
