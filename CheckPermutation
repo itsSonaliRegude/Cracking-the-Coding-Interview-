@@ -1,0 +1,46 @@
+package ArraysAndString;
+
+import java.util.Arrays;
+
+//given two string, write a method to decide if one is a permutation of the other
+//permutation :- a permutation of a string is another string that contain same characters, only the order of characters can be different
+
+public class CheckPermutation {
+	static boolean permutation(String str1, String str2) {
+	
+if(str1.length()==str2.length()) {
+			//sorting strings
+			
+			char chArray1[]=str1.toCharArray();//method which convert string to char array
+			char chArray2[]=str2.toCharArray();
+			
+			Arrays.sort(chArray1);//sort the array of char
+			Arrays.sort(chArray2);
+			
+//		    //converting the sorted array to string by passing it to the constructor of the string array			
+//			String a= new String(chArray1);
+//		    String b=new String(chArray2);
+//		    
+			for (int i=0;i<str1.length();i++) {
+		    if (chArray1[i]==chArray2[i]) 
+			return true;
+		
+ 		}}
+	return false;
+		
+	}
+
+public static void main(String[] args) {
+	String str1="naliso";
+	String str2="sonali";
+	
+//	CheckPermutation obj=new CheckPermutation();
+	if(permutation(str1,str2)){
+		System.out.println("the given string "+"'"+str1+"'"+" is a permutation of another string "+"'"+str2+"'");
+	}else {
+		System.out.println("the given string "+"'"+str1+"'"+" is NOT a permutation of a another string "+"'"+str2+"'");
+	}
+	
+	}
+
+}
