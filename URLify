@@ -1,0 +1,20 @@
+package ArraysAndString;
+/*write a method to replace all spaces in a string with '%20'.you may assume that the string has sufficient space at the end to hold
+the additional characters and that you are given the "true" length of the string (note use char array)
+
+input "Mr John Smith" , true length of the string 13
+output "Mr%20John%20Smith" */
+
+public class URLify {
+    
+	public static void main(String[] args) {
+       String str="Mr John Smith";
+      
+     String a= str.replace(" ", "%20");
+       int length=a.length();  
+       System.out.println("length of a input string is :- "+ str.length());
+       System.out.println("new string is :- "+a);
+       System.out.println("length of the new string is :- "+length);
+
+}
+}
